@@ -20,9 +20,6 @@ require("requisites.php");
 require("header.php");
 ?>
 
-<!-- section of script -->
-
-
 <div style="background: url(/img/leather1.jpg) repeat-x left top; padding-top: 40px;">
     <section class="main">
         <div>
@@ -237,12 +234,5 @@ require("header.php");
     </section>
 </div>
 
-
-<section class="offers"><div><a href="aktcii_i_skidki.php"><img src="./index_files/offer1.gif" width="805" height="189" alt=""></a></div></section>
-<?php
-require("responses.php");
-require("payment.php");
-require("footer.php");
-?>
 </body>
 </html>
