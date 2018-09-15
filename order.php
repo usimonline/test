@@ -25,14 +25,11 @@ require("header.php");
 
 <div style="background: url(/img/leather1.jpg) repeat-x left top; padding-top: 40px;">
     <section class="main">
-        <?php
-        require("calc2.php");
-        ?>
+        <div>
+        </div>
         <div>
 
-            <h1>Заказать работу</h1>Сделайте запрос или узнайте об услуге <?php echo $site_name;?> подробнее, заполнив форму.&nbsp;<br>
-            Не зaбудьте указать Ваши контактные данные, чтобы мы могли оперативно с Вами связаться.<br>
-            Достаточно заполнить три следующих поля для оценки заказа!<br>
+            <h1>Регистрация</h1>
 
             <style>
                 form#request_form { width: 75%; }
