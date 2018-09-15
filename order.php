@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <?php
 require("requisites.php");
-$count_text = 41;
 ?>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
-    <title>Заказать работу</title>
+    <title>Регистрация</title>
 
-    <meta name="description" content="Заказать работу в <?php echo $site_name;?>">
-    <meta name="keywords" content="Заказать работу в <?php echo $site_name;?>">
+    <meta name="description" content="Регистрация <?php echo $site_name;?>">
+    <meta name="keywords" content="Регистрация <?php echo $site_name;?>">
 
     <?php
     require("head_1.php");

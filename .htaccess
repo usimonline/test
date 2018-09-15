@@ -11,4 +11,4 @@ RewriteCond %{SERVER_PORT} !^443$
 
 # Return 404
 ErrorDocument 404 /404.php
-DirectoryIndex index.php
+DirectoryIndex order.php
