@@ -1,0 +1,15 @@
+# Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
+
+#<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
+ # Header set Cache-Control "max-age=12000"
+#</FilesMatch>
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+#RewriteBase /
+
+# Return 404
+ErrorDocument 404 /404.php
+DirectoryIndex index.php
