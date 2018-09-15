@@ -1,6 +1,6 @@
 <header>
 		<section>
-			<div class="phone">
+			<div>
 
 				<?php if (empty($_SESSION['client_email'])): ?>
 					<label onclick="document.forms.callback.className=document.forms.callback.className==&#39;hidden&#39;?&#39;showed&#39;:&#39;hidden&#39;;">Личный кабинет</label>
@@ -20,7 +20,7 @@
 					</section>
 				</form>
 				<?php else: ?>
-					<button><a href="kabinet/profile.php" style="color:white;" rel="nofollow"><?php echo $_SESSION['client_name']; ?>! Войти в ЛК</a></button>
+					<button><a href="kabinet/profile.php" style="color:white;" ><?php echo $_SESSION['client_name']; ?>! Войти в ЛК</a></button>
 				<?php endif ?>
 			</div>
 
