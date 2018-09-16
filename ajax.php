@@ -130,7 +130,7 @@ class AuthorizationAjaxRequest extends AjaxRequest
             $this->setFieldError("login", $e->getMessage());
             return;
         }
-        $user->authorize($login, $password1, false, $username);
+        $user->authorize($login, $password1, true, $username);
 
         $this->message = sprintf("Hello, %s! Thank you for registration.", $login);
         $this->setResponse("redirect", "/");
