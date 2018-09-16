@@ -1,20 +1,12 @@
-<?php
+<?php require_once 'start.php'; ?>
 
-if (!empty($_COOKIE['sid'])) {
-    // check session id in cookies
-    session_id($_COOKIE['sid']);
-}
-session_start();
-require_once './classes/Auth.class.php';
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <title>PHP Ajax Registration</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+
+    <?php require_once 'head.php'; ?>
+
   </head>
 
   <body>
@@ -54,9 +46,7 @@ require_once './classes/Auth.class.php';
 
     </div> <!-- /container -->
 
-    <script src="./vendor/jquery-2.0.3.min.js"></script>
-    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./js/ajax-form.js"></script>
+    <?php require_once 'lower_js.php'; ?>
 
   </body>
 </html>
