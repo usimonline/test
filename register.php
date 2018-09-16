@@ -15,7 +15,7 @@
 
             <?php if (Auth\User::isAuthorized()): ?>
     
-            <h1>Your are already registered!</h1>
+            <h1>Your are already registered! <?php echo $name?> </h1>
 
             <form class="ajax" method="post" action="./ajax.php">
                 <input type="hidden" name="act" value="logout">
@@ -37,7 +37,7 @@
                 <input name="username" type="text" class="input-block-level" placeholder="Username">
                 <input type="hidden" name="act" value="register">
                 <button class="btn btn-large btn-primary" type="submit">Register</button>
-                <div class="alert alert-info" >
+                <div class="alert alert-info" style="margin-top:15px;">
                     <p>Already have account? <a href="/">Sign In.</a></p>
                 </div>
             </form>

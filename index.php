@@ -15,7 +15,7 @@
 
             <?php if (Auth\User::isAuthorized()): ?>
     
-            <h1>Hello!</h1>
+            <h1>Hello <?php echo $name?></h1>
 
             <form class="ajax" method="post" action="./ajax.php">
                 <input type="hidden" name="act" value="logout">
