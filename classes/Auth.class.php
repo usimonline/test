@@ -62,6 +62,21 @@ class User
         return $row["salt"];
     }
 
+    public function checkEmail($email) {
+        $query = "select 1 from users where email = :email limit 1";
+        $sth = $this->db->prepare($query);
+        $sth->execute(
+            array(
+                ":email" => $email
+            )
+        );
+        $row = $sth->fetch();
+        if (!$row) {
+            return false;
+        }
+        return true;
+    }
+
     public function authorize($login, $password, $remember=false)
     {
         $query = "select id, login from users where
@@ -119,9 +134,14 @@ class User
 
     public function create($login, $password, $email, $username) {
         $user_exists = $this->getSalt($login);
+        $email_exists = $this->checkEmail($email);
 
         if ($user_exists) {
             throw new \Exception("User exists: " . $login, 1);
+        }
+
+        if ($email_exists) {
+            throw new \Exception("Email_exists: " . $email, 1);
         }
 
         $query = "insert into users (login, password, email, username, salt)
