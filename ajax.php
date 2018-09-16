@@ -86,6 +86,7 @@ class AuthorizationAjaxRequest extends AjaxRequest
         }
 
         setcookie("sid", "");
+        setcookie("name", "");
 
         $login = $this->getRequestParam("login");
         $email = $this->getRequestParam("email");
