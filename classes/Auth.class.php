@@ -30,7 +30,7 @@ class User
     public static function isAuthorized()
     {
         if (!empty($_SESSION["user_id"])) {
-            return $_SESSION["login"]; // был  (bool) $_SESSION["user_id"]
+            return (bool) $_SESSION["user_id"];
         }
         return false;
     }
