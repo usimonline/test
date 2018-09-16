@@ -32,9 +32,9 @@
                 <h2 class="form-signin-heading">Please sign in</h2>
                 <input name="login" type="text" class="input-block-level" placeholder="Login" autofocus>
                 <input name="password" type="password" class="input-block-level" placeholder="Password">
-                <label class="checkbox">
+                <!-- <label class="checkbox">
                     <input name="remember-me" type="checkbox" value="remember-me" checked> Remember me
-                </label>
+                </label> -->
                 <input type="hidden" name="act" value="login">
                 <button class="btn btn-large btn-primary" type="submit">Sign in</button>
                 <div class="alert alert-info" style="margin-top:15px;">
