@@ -2,51 +2,51 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>PHP Ajax Registration</title>
+    <head>
+        <title>PHP Ajax Registration</title>
 
-    <?php require_once 'head.php'; ?>
+        <?php require_once 'head.php'; ?>
 
-  </head>
+    </head>
 
-  <body>
+    <body>
 
-    <div class="container">
+        <div class="container">
 
-      <?php if (Auth\User::isAuthorized()): ?>
+            <?php if (Auth\User::isAuthorized()): ?>
     
-      <h1>Your are already registered!</h1>
+            <h1>Your are already registered!</h1>
 
-      <form class="ajax" method="post" action="./ajax.php">
-          <input type="hidden" name="act" value="logout">
-          <div class="form-actions">
-              <button class="btn btn-large btn-primary" type="submit">Logout</button>
-          </div>
-      </form>
+            <form class="ajax" method="post" action="./ajax.php">
+                <input type="hidden" name="act" value="logout">
+                <div class="form-actions">
+                    <button class="btn btn-large btn-primary" type="submit">Logout</button>
+                </div>
+            </form>
 
-      <?php else: ?>
+            <?php else: ?>
 
-      <form class="form-signin ajax" method="post" action="./ajax.php">
-        <div class="main-error alert alert-error hide"></div>
+            <form class="form-signin ajax" method="post" action="./ajax.php">
+                <div class="main-error alert alert-error hide"></div>
 
-        <h2 class="form-signin-heading">Please sign up</h2>
-        <input name="login" type="text" class="input-block-level" placeholder="Login" autofocus>
-        <input name="password1" type="password" class="input-block-level" placeholder="Password">
-        <input name="password2" type="password" class="input-block-level" placeholder="Confirm password">
-        <input name="email" type="text" class="input-block-level" placeholder="Email">
-        <input name="username" type="text" class="input-block-level" placeholder="Username">
-        <input type="hidden" name="act" value="register">
-        <button class="btn btn-large btn-primary" type="submit">Register</button>
-        <div class="alert alert-info" style="margin-top:15px;">
-            <p>Already have account? <a href="/">Sign In.</a>
-        </div>
-      </form>
+                <h2 class="form-signin-heading">Please sign up</h2>
+                <input name="login" type="text" class="input-block-level" placeholder="Login" autofocus>
+                <input name="password1" type="password" class="input-block-level" placeholder="Password">
+                <input name="password2" type="password" class="input-block-level" placeholder="Confirm password">
+                <input name="email" type="text" class="input-block-level" placeholder="Email">
+                <input name="username" type="text" class="input-block-level" placeholder="Username">
+                <input type="hidden" name="act" value="register">
+                <button class="btn btn-large btn-primary" type="submit">Register</button>
+                <div class="alert alert-info">
+                    <p>Already have account? <a href="/">Sign In.</a></p>
+                </div>
+            </form>
 
-      <?php endif; ?>
+            <?php endif; ?>
 
-    </div> <!-- /container -->
+        </div> <!-- /container -->
 
-    <?php require_once 'end.php'; ?>
+        <?php require_once 'end.php'; ?>
 
-  </body>
+    </body>
 </html>

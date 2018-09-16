@@ -27,19 +27,19 @@
             <?php else: ?>
 
             <form class="form-signin ajax" method="post" action="./ajax.php">
-            <div class="main-error alert alert-error hide"></div>
+                <div class="main-error alert alert-error hide"></div>
 
-            <h2 class="form-signin-heading">Please sign in</h2>
-            <input name="login" type="text" class="input-block-level" placeholder="Login" autofocus>
-            <input name="password" type="password" class="input-block-level" placeholder="Password">
-            <label class="checkbox">
-                <input name="remember-me" type="checkbox" value="remember-me" checked> Remember me
-            </label>
-            <input type="hidden" name="act" value="login">
-            <button class="btn btn-large btn-primary" type="submit">Sign in</button>
-            <div class="alert alert-info" style="margin-top:15px;">
-            <p>Not have an account? <a href="/register.php">Register it.</a></p>
-            </div>
+                <h2 class="form-signin-heading">Please sign in</h2>
+                <input name="login" type="text" class="input-block-level" placeholder="Login" autofocus>
+                <input name="password" type="password" class="input-block-level" placeholder="Password">
+                <label class="checkbox">
+                    <input name="remember-me" type="checkbox" value="remember-me" checked> Remember me
+                </label>
+                <input type="hidden" name="act" value="login">
+                <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+                <div class="alert alert-info" style="margin-top:15px;">
+                    <p>Not have an account? <a href="/register.php">Register it.</a></p>
+                </div>
             </form>
 
             <?php endif; ?>
