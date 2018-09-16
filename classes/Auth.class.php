@@ -122,6 +122,7 @@ class User
         if ($remember) {
             // Save session id in cookies
             $sid = session_id();
+            $temp_name = 'Игорь';
 
             $expire = time() + $days * 24 * 3600;
             $domain = ""; // default domain
@@ -129,6 +130,7 @@ class User
             $path = "/";
 
             $cookie = setcookie("sid", $sid, $expire, $path, $domain, $secure, $http_only);
+            $cookie = setcookie("name", $temp_name, $expire, $path, $domain, $secure, $http_only);
         }
     }
 
