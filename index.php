@@ -16,7 +16,7 @@
             <?php if (Auth\User::isAuthorized()): ?>
     
             <h1>Hello <?php echo $_SESSION["login"]; ?> </h1>
-              <?php print_r($_SESSION); ?>
+              <?php print_r($_COOKIE); ?>
 
             <form class="ajax" method="post" action="./ajax.php">
                 <input type="hidden" name="act" value="logout">
