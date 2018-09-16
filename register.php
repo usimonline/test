@@ -41,7 +41,7 @@ require_once './classes/Auth.class.php';
         <input name="login" type="text" class="input-block-level" placeholder="Login" autofocus>
         <input name="password1" type="password" class="input-block-level" placeholder="Password">
         <input name="password2" type="password" class="input-block-level" placeholder="Confirm password">
-         <input name="email" type="text" class="input-block-level" placeholder="Email">
+        <input name="email" type="text" class="input-block-level" placeholder="Email">
         <input name="username" type="text" class="input-block-level" placeholder="Username">
         <input type="hidden" name="act" value="register">
         <button class="btn btn-large btn-primary" type="submit">Register</button>
