@@ -46,7 +46,7 @@
 
         </div> <!-- /container -->
 
-        <?php require_once 'lower_js.php'; ?>
+        <?php require_once 'end.php'; ?>
 
     </body>
 </html>
