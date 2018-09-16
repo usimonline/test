@@ -37,7 +37,7 @@
                 <input name="username" type="text" class="input-block-level" placeholder="Username">
                 <input type="hidden" name="act" value="register">
                 <button class="btn btn-large btn-primary" type="submit">Register</button>
-                <div class="alert alert-info">
+                <div class="alert-info">
                     <p>Already have account? <a href="/">Sign In.</a></p>
                 </div>
             </form>
