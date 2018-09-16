@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.7.9
+- https://www.phpmyadmin.net
+-
+- Хост: localhost:3306
+- Время создания: Сен 16 2018 г., 13:34
+- Версия сервера: 10.2.17-MariaDB
+- Версия PHP: 7.1.21
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="u689193950_base" collation="utf8_unicode_ci" charset="utf8">
+            <pma:table name="users">
+                CREATE TABLE `users` (
+                  `id` mediumint(9) NOT NULL AUTO_INCREMENT,
+                  `login` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  `salt` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - База данных: 'u689193950_base'
+    -->
+    <database name="u689193950_base">
+        <!-- Таблица users -->
+        <table name="users">
+            <column name="id">1</column>
+            <column name="login">Igor</column>
+            <column name="password">5dc667df4a9186a681eb48e40ec2f599</column>
+            <column name="email">true@mail.ru</column>
+            <column name="username">Igor</column>
+            <column name="salt">5b9de455924f1</column>
+        </table>
+        <table name="users">
+            <column name="id">2</column>
+            <column name="login">Usim</column>
+            <column name="password">7455f73800e72586c1df722bc41412c7</column>
+            <column name="email">no@gmail.com</column>
+            <column name="username">Usimov</column>
+            <column name="salt">5b9de5468b0ca</column>
+        </table>
+        <table name="users">
+            <column name="id">3</column>
+            <column name="login">Petr</column>
+            <column name="password">e69ffcda5a02c3e827e585a464669610</column>
+            <column name="email">kuku@kuk.ru</column>
+            <column name="username">Петр</column>
+            <column name="salt">5b9de805045c6</column>
+        </table>
+        <table name="users">
+            <column name="id">4</column>
+            <column name="login">Ram</column>
+            <column name="password">344f34b8bfd1cf2d46503750077e3e87</column>
+            <column name="email">ram@ramshtain.com</column>
+            <column name="username">Рамштайн</column>
+            <column name="salt">5b9de82476b84</column>
+        </table>
+        <table name="users">
+            <column name="id">5</column>
+            <column name="login">Putin</column>
+            <column name="password">6ad8e85b3074eaf9251fbd56901685aa</column>
+            <column name="email">Putin</column>
+            <column name="username">Путин</column>
+            <column name="salt">5b9deb5ce55f3</column>
+        </table>
+        <table name="users">
+            <column name="id">6</column>
+            <column name="login">Tramp</column>
+            <column name="password">a9cddcc80e90428ed908524983d52c74</column>
+            <column name="email">tramp@gmail.com</column>
+            <column name="username">Tramp</column>
+            <column name="salt">5b9df47255a95</column>
+        </table>
+        <table name="users">
+            <column name="id">7</column>
+            <column name="login">Serega</column>
+            <column name="password">500423cc0e8b6b0795b4f8410dd6667a</column>
+            <column name="email">serega@gmail.com</column>
+            <column name="username">Maks</column>
+            <column name="salt">5b9df5b187d7d</column>
+        </table>
+        <table name="users">
+            <column name="id">8</column>
+            <column name="login">Misha</column>
+            <column name="password">29ed44c988a348aa5bfcb4f51cd07f12</column>
+            <column name="email">ser@yandex.ru</column>
+            <column name="username">Архангел Михаил</column>
+            <column name="salt">5b9dfcfb1b68c</column>
+        </table>
+        <table name="users">
+            <column name="id">9</column>
+            <column name="login">Marik</column>
+            <column name="password">44faf3342b7faea3d14581a7a7914a91</column>
+            <column name="email">marik@gmail.com</column>
+            <column name="username">Марик</column>
+            <column name="salt">5b9e202559775</column>
+        </table>
+        <table name="users">
+            <column name="id">10</column>
+            <column name="login">Zerg</column>
+            <column name="password">559fc1ce436452e5e28ebb32a7d7f997</column>
+            <column name="email">zerg@mail.ru</column>
+            <column name="username">Зерг</column>
+            <column name="salt">5b9e2c68bec7d</column>
+        </table>
+        <table name="users">
+            <column name="id">11</column>
+            <column name="login">Alex</column>
+            <column name="password">1624efa90418a93f400db413600e8b2d</column>
+            <column name="email">alex@mail.ru</column>
+            <column name="username">Алексей</column>
+            <column name="salt">5b9e30f1cee29</column>
+        </table>
+        <table name="users">
+            <column name="id">12</column>
+            <column name="login">Vika</column>
+            <column name="password">580faa573531f9d902f6ad66c54e7b10</column>
+            <column name="email">vika@gmail.com</column>
+            <column name="username">Викулька</column>
+            <column name="salt">5b9e31af4bcce</column>
+        </table>
+        <table name="users">
+            <column name="id">13</column>
+            <column name="login">Ura</column>
+            <column name="password">0a5e149cf6c7288c158375d272141e6f</column>
+            <column name="email">ura@mail.ru</column>
+            <column name="username">Юра</column>
+            <column name="salt">5b9e32ce39d99</column>
+        </table>
+        <table name="users">
+            <column name="id">14</column>
+            <column name="login">Olga</column>
+            <column name="password">aea21be5faaa73189bdce66293fba42f</column>
+            <column name="email">Olga@mail.ru</column>
+            <column name="username">Ольга</column>
+            <column name="salt">5b9e36da5f4df</column>
+        </table>
+        <table name="users">
+            <column name="id">15</column>
+            <column name="login">zzz</column>
+            <column name="password">0f6bf67754ce2edcb8307e0c21b2a53b</column>
+            <column name="email">zzz@mail.ru</column>
+            <column name="username">Ззз</column>
+            <column name="salt">5b9e578452ef2</column>
+        </table>
+        <table name="users">
+            <column name="id">16</column>
+            <column name="login">bbb</column>
+            <column name="password">e7d9bbba5078df7b619dc95dc2eef6be</column>
+            <column name="email">bbb@mail.ru</column>
+            <column name="username">Бэбэбэ</column>
+            <column name="salt">5b9e58f7e0038</column>
+        </table>
+    </database>
+</pma_xml_export>
