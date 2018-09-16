@@ -117,15 +117,15 @@ class User
         }
     }
 
-    public function create($login, $password) { //добавить email и name
+    public function create($login, $password, $email) { //добавить email и name
         $user_exists = $this->getSalt($login);
 
         if ($user_exists) {
             throw new \Exception("User exists: " . $login, 1);
         }
 
-        $query = "insert into users (login, password, salt) 
-            values (:login, :password, :salt)";
+        $query = "insert into users (login, password, email, salt) 
+            values (:login, :password, :email, :salt)";
         $hashes = $this->passwordHash($password);
         $sth = $this->db->prepare($query);
 
@@ -135,6 +135,7 @@ class User
                 array(
                     ':login' => $login,
                     ':password' => $hashes['hash'],
+                    ':email' => $login,
                     ':salt' => $hashes['salt'],
                 )
             );
