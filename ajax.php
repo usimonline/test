@@ -89,8 +89,6 @@ class AuthorizationAjaxRequest extends AjaxRequest
         $login = $this->getRequestParam("login");
         $password1 = $this->getRequestParam("password1");
         $password2 = $this->getRequestParam("password2");
-        $email = $this->getRequestParam("email");
-        $name = $this->getRequestParam("name");
 
         if (empty($login)) {
             $this->setFieldError("login", "Enter the login");
@@ -99,16 +97,6 @@ class AuthorizationAjaxRequest extends AjaxRequest
 
         if (empty($password1)) {
             $this->setFieldError("password1", "Enter the password");
-            return;
-        }
-
-        if (empty($email)) {
-            $this->setFieldError("email", "Enter the email");
-            return;
-        }
-
-        if (empty($name)) {
-            $this->setFieldError("name", "Enter the name");
             return;
         }
 
