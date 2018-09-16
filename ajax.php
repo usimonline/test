@@ -31,8 +31,6 @@ class AuthorizationAjaxRequest extends AjaxRequest
 
         $login = $this->getRequestParam("login");
         $password = $this->getRequestParam("password");
-        //$username = $this->getRequestParam("username");
-        $remember = !!$this->getRequestParam("remember-me");
 
         if (empty($login)) {
             $this->setFieldError("login", "Enter the login");
@@ -45,7 +43,7 @@ class AuthorizationAjaxRequest extends AjaxRequest
         }
 
         $user = new Auth\User();
-        $auth_result = $user->authorize($login, $password, $remember);
+        $auth_result = $user->authorize($login, $password);
 
         if (!$auth_result) {
             $this->setFieldError("password", "Invalid login or password");
@@ -134,7 +132,7 @@ class AuthorizationAjaxRequest extends AjaxRequest
             $this->setFieldError("login", $e->getMessage());
             return;
         }
-        $user->authorize($login, $password1, true);
+        $user->authorize($login, $password1);
 
         $this->message = sprintf("Hello, %s! Thank you for registration.", $login);
         $this->setResponse("redirect", "/");

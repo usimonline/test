@@ -78,7 +78,7 @@ class User
         return true;
     }
 
-    public function authorize($login, $password, $remember=false)
+    public function authorize($login, $password)
     {
         $query = "select id, login, username from users where
             login = :login and password = :password limit 1";
@@ -104,7 +104,7 @@ class User
             $this->is_authorized = true;
             $this->user_id = $this->user['id'];
             $this->user_name = $this->user['username'];
-            $this->saveSession($remember);
+            $this->saveSession();
         }
 
         return $this->is_authorized;
@@ -118,24 +118,23 @@ class User
         }
     }
 
-    public function saveSession($remember = false, $http_only = true, $days = 7)
+    public function saveSession($http_only = true, $days = 7)
     {
         $_SESSION["user_id"] = $this->user_id;
         $_SESSION["username"] = $this->user_name;
 
-        if ($remember) {
-            // Save session id in cookies
-            $sid = session_id();
-            $name = $_SESSION["username"];
+        // Save session id in cookies
+        $sid = session_id();
+        $name = $_SESSION["username"];
 
-            $expire = time() + $days * 24 * 3600;
-            $domain = ""; // default domain
-            $secure = false;
-            $path = "/";
+        $expire = time() + $days * 24 * 3600;
+        $domain = ""; // default domain
+        $secure = false;
+        $path = "/";
 
-            $cookie = setcookie("sid", $sid, $expire, $path, $domain, $secure, $http_only);
-            $cookie = setcookie("name", $name, $expire, $path, $domain, $secure, $http_only);
-        }
+        $cookie = setcookie("sid", $sid, $expire, $path, $domain, $secure, $http_only);
+        $cookie = setcookie("name", $name, $expire, $path, $domain, $secure, $http_only);
+
     }
 
     public function create($login, $password, $email, $username) {
