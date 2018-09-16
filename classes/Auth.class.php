@@ -77,7 +77,7 @@ class User
         return true;
     }
 
-    public function authorize($login, $password, $remember=false)
+    public function authorize($login, $password, $remember=false, $username = false)
     {
         $query = "select id, login from users where
             login = :login and password = :password limit 1";
@@ -115,14 +115,14 @@ class User
         }
     }
 
-    public function saveSession($remember = false, $http_only = true, $days = 7)
+    public function saveSession($remember = false, $http_only = true, $days = 7, $username = false)
     {
         $_SESSION["user_id"] = $this->user_id;
 
         if ($remember) {
             // Save session id in cookies
             $sid = session_id();
-            $temp_name = 'Игорь';
+
 
             $expire = time() + $days * 24 * 3600;
             $domain = ""; // default domain
@@ -130,7 +130,7 @@ class User
             $path = "/";
 
             $cookie = setcookie("sid", $sid, $expire, $path, $domain, $secure, $http_only);
-            $cookie = setcookie("name", $temp_name, $expire, $path, $domain, $secure, $http_only);
+            $cookie = setcookie("name", $username, $expire, $path, $domain, $secure, $http_only);
         }
     }
 
