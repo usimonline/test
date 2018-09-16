@@ -102,7 +102,7 @@ class User
         } else {
             $this->is_authorized = true;
             $this->user_id = $this->user['id'];
-            $this->saveSession($remember);
+            $this->saveSession($remember, true, 7, $username);
         }
 
         return $this->is_authorized;
