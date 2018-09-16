@@ -30,6 +30,7 @@ class AuthorizationAjaxRequest extends AjaxRequest
 
         $login = $this->getRequestParam("login");
         $password = $this->getRequestParam("password");
+        $username = $this->getRequestParam("username");
         $remember = !!$this->getRequestParam("remember-me");
 
         if (empty($login)) {
@@ -43,7 +44,7 @@ class AuthorizationAjaxRequest extends AjaxRequest
         }
 
         $user = new Auth\User();
-        $auth_result = $user->authorize($login, $password, $remember);
+        $auth_result = $user->authorize($login, $password, $remember, $username);
 
         if (!$auth_result) {
             $this->setFieldError("password", "Invalid login or password");
