@@ -15,8 +15,7 @@
 
             <?php if (Auth\User::isAuthorized()): ?>
     
-            <h1>Your are already registered! <?php echo $_SESSION["login"]; ?> </h1>
-              <?php print_r($_SESSION); ?>
+            <h1>Your are already registered! <?php echo $_COOKIE['name']; ?> </h1>
 
             <form class="ajax" method="post" action="./ajax.php">
                 <input type="hidden" name="act" value="logout">
