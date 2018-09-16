@@ -117,7 +117,7 @@ class User
         }
     }
 
-    public function create($login, $password, $email, $username) { //добавить email и name
+    public function create($login, $password, $email, $username) {
         $user_exists = $this->getSalt($login);
 
         if ($user_exists) {

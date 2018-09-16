@@ -87,8 +87,20 @@ class AuthorizationAjaxRequest extends AjaxRequest
         setcookie("sid", "");
 
         $login = $this->getRequestParam("login");
+        $email = $this->getRequestParam("email");
+        $username = $this->getRequestParam("username");
         $password1 = $this->getRequestParam("password1");
         $password2 = $this->getRequestParam("password2");
+
+        if (empty($email)) {
+            $this->setFieldError("email", "Enter the email");
+            return;
+        }
+
+        if (empty($username)) {
+            $this->setFieldError("username", "Enter the username");
+            return;
+        }
 
         if (empty($login)) {
             $this->setFieldError("login", "Enter the login");
@@ -113,7 +125,7 @@ class AuthorizationAjaxRequest extends AjaxRequest
         $user = new Auth\User();
 
         try {
-            $new_user_id = $user->create($login, $password1);
+            $new_user_id = $user->create($login, $password1, $email, $username);
         } catch (\Exception $e) {
             $this->setFieldError("login", $e->getMessage());
             return;
