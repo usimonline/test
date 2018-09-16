@@ -15,7 +15,7 @@
 
             <?php if (Auth\User::isAuthorized()): ?>
     
-            <h1>Your are already registered! <?php echo $name?> </h1>
+            <h1>Your are already registered! <?php echo $_SESSION["username"]; ?> </h1>
 
             <form class="ajax" method="post" action="./ajax.php">
                 <input type="hidden" name="act" value="logout">
