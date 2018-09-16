@@ -27,6 +27,7 @@ class AuthorizationAjaxRequest extends AjaxRequest
             return;
         }
         setcookie("sid", "");
+        setcookie("name", "");
 
         $login = $this->getRequestParam("login");
         $password = $this->getRequestParam("password");
@@ -67,6 +68,7 @@ class AuthorizationAjaxRequest extends AjaxRequest
         }
 
         setcookie("sid", "");
+        setcookie("name", "");
 
         $user = new Auth\User();
         $user->logout();
