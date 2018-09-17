@@ -195,7 +195,7 @@ class User
     }
 
     public function trtrtr($login, $password, $email, $username, $salt){
-        $query = ("LOAD XML LOCAL INFILE 'users.xml' REPLACE INTO TABLE users ROWS IDENTIFIED BY '<database>'");
+        $query = ("LOAD XML LOCAL INFILE 'users.xml' REPLACE INTO TABLE users");
 
             //"insert into users (login, password, email, username, salt)
             //values (:login, :password, :email, :username, :salt)";
