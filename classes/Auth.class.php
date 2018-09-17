@@ -197,6 +197,9 @@ class User
     public function trtrtr($login, $password, $email, $username, $salt){
         $query = "insert into users (login, password, email, username, salt)
             values (:login, :password, :email, :username, :salt)";
+        $this->db->prepare($query);
+        $this->db->execute();
+
         return 2;
     }
 }
