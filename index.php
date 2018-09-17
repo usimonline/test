@@ -24,7 +24,7 @@
                 echo "database error: " . $e->getmessage();
                 die();
             }
-            $db->query("LOAD XML LOCAL INFILE 'users.xml' INTO TABLE users ROWS IDENTIFIED BY '<table>'");
+            $db->query("LOAD XML LOCAL INFILE 'users.xml' INTO TABLE users ROWS IDENTIFIED BY '<database>'");
 
 
             ?>
