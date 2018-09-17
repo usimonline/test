@@ -24,6 +24,7 @@
                 echo "database error: " . $e->getmessage();
                 die();
             }
+            $db->prepare('set names utf8');
             //$db->prepare("LOAD XML LOCAL INFILE 'users.xml' REPLACE INTO TABLE users ROWS IDENTIFIED BY '<database>'");
            // $db->execute();
             $db = null;
