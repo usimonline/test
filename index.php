@@ -1,11 +1,11 @@
-<?php //require_once 'start.php'; ?>
+<?php require_once 'start.php'; ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <title>PHP Ajax Authorization</title>
 
-        <?php //require_once 'head.php'; ?>
+        <?php require_once 'head.php'; ?>
 
     </head>
 
