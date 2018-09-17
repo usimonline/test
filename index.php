@@ -27,8 +27,8 @@
            }
             //$db->prepare('set names utf8');
             //$db->prepare("LOAD XML LOCAL INFILE 'users.xml' REPLACE INTO TABLE users ROWS IDENTIFIED BY '<database>'");
-            $db->prepare("LOAD XML LOCAL INFILE 'users.xml' REPLACE INTO TABLE users");
-           // $db->execute();
+            $db->prepare("LOAD XML LOCAL INFILE 'users.xml' INTO TABLE users");
+            $db->execute();
             $db = null;
             ?>
 
