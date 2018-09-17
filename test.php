@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
 
 <?php
+echo '1';
              $db_host = "localhost";
              $db_name = "u689193950_base";
              $db_user = "u689193950_user";
