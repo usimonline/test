@@ -36,7 +36,7 @@
     <database name="u689193950_base">
         <!-- Таблица users -->
         <table name="users">
-            <column name="id">1</column>
+            <column name="id">18</column>
             <column name="login">Nov</column>
             <column name="password">5dc667df4a9186a681eb48e40ec2f599</column>
             <column name="email">true222@mail.ru</column>
