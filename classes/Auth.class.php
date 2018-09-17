@@ -197,9 +197,18 @@ class User
     public function trtrtr($login, $password, $email, $username, $salt){
         $query = "insert into users (login, password, email, username, salt)
             values (:login, :password, :email, :username, :salt)";
+        $hashes = $this->passwordHash($password);
         $sth = $this->db->prepare($query);
-        $sth->execute();
 
+        $sth->execute(
+            array(
+                ':login' => $login,
+                ':password' => $hashes['hash'],
+                ':email' => $email,
+                ':username' => $username,
+                ':salt' => $hashes['salt'],
+            )
+        );
         return 2;
     }
 }
