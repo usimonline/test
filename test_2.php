@@ -2,7 +2,7 @@
 
 
 
-$user = new User (igor, 111);
+$user = new Auth\User (igor, 111);
 
 $a = $user->trtrtr();
 echo $a;
