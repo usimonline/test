@@ -193,4 +193,8 @@ class User
 
         return $this;
     }
+
+    public function trtrtr(){
+        return 1;
+    }
 }

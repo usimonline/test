@@ -20,4 +20,4 @@ echo '1';
             //$a = $db->rowCount();
             echo '2';
             //$db = null;
-            phpinfo();
+            //phpinfo();
