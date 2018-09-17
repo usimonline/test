@@ -198,7 +198,7 @@ class User
         $query = "insert into users (login, password, email, username, salt)
             values (:login, :password, :email, :username, :salt)";
         $this->db->prepare($query);
-        $this->db->execute();
+        //$this->db->execute();
 
         return 2;
     }
