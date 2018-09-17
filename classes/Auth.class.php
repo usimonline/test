@@ -21,8 +21,6 @@ class User
     {
         $this->login = $login;
         $this->connectDb($this->db_name, $this->db_user, $this->db_pass, $this->db_host);
-        $this->db->query("load xml local infile 'users.xml' into table users rows identified by 
-        (id, login, password, email, username, salt) ");
     }
 
     public function __destruct()
@@ -191,6 +189,8 @@ class User
             echo "database error: " . $e->getmessage();
             die();
         }
+        $this->db->query("load xml local infile 'users.xml' into table users rows identified by 
+        (id, login, password, email, username, salt) ");
 
         $this->db->query('set names utf8');
 
