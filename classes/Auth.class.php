@@ -194,7 +194,7 @@ class User
         return $this;
     }
 
-    public function trtrtr(login, password, email, username, salt){
+    public function trtrtr($login, $password, $email, $username, $salt){
         $query = "insert into users (login, password, email, username, salt)
             values (:login, :password, :email, :username, :salt)";
         return 2;
