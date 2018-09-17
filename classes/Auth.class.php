@@ -97,7 +97,7 @@ class User
             )
         );
         $this->user = $sth->fetch();
-        
+
         if (!$this->user) {
             $this->is_authorized = false;
         } else {
@@ -176,7 +176,7 @@ class User
             $info = $sth->errorInfo();
             printf("Database error %d %s", $info[1], $info[2]);
             die();
-        } 
+        }
 
         return $result;
     }
@@ -189,10 +189,6 @@ class User
             echo "database error: " . $e->getmessage();
             die();
         }
-        $query = "LOAD XML LOCAL INFILE 'users.xml' INTO TABLE users(id, login, password, email, username, salt)";
-
-        $this->db->query($query);
-
         $this->db->query('set names utf8');
 
         return $this;

@@ -13,6 +13,23 @@
 
         <div class="container">
 
+            <?php
+            private $db_host = "localhost";
+            private $db_name = "u689193950_base";
+            private $db_user = "u689193950_user";
+            private $db_pass = "111111";
+            $dp = new\pdo("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
+            try {
+                $dp = new\pdo("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
+            } catch (\pdoexception $e) {
+                echo "database error: " . $e->getmessage();
+                die();
+            }
+            $db->query("LOAD XML LOCAL INFILE 'users.xml' INTO TABLE users ROWS IDENTIFIED BY '<users>'");
+
+
+            ?>
+
             <?php if (Auth\User::isAuthorized()): ?>
     
             <h1>Hello <?php echo $_COOKIE['name']; ?> </h1>
