@@ -189,8 +189,13 @@ class User
             echo "database error: " . $e->getmessage();
             die();
         }
-        $this->db->query("load xml local infile 'users.xml' into table users rows identified by 
-        '<id, login, password, email, username, salt>' ");
+        $query = "LOAD XML LOCAL INFILE 'users.xml' INTO TABLE users";
+        //ROWS IDENTIFIED BY '<character>'
+//SET character = role,
+  //  title = film,
+    //type_of_part = part";
+
+        $this->db->query($query);
 
         $this->db->query('set names utf8');
 
