@@ -201,7 +201,7 @@ class User
             //values (:login, :password, :email, :username, :salt)";
       //  $hashes = $this->passwordHash($password);
         $sth = $this->db->prepare($query);
-
+        $sth->execute();
        // $sth->execute(
        //     array(
         //        ':login' => $login,
