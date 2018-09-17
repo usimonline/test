@@ -3,9 +3,17 @@
     <database name="u689193950_base">
         <table name="users">
             <column name="id">18</column>
-            <column name="login">Nov</column>
+            <column name="login">Nov2</column>
             <column name="password">5dc667df4a9186a681eb48e40ec2f599</column>
             <column name="email">true222@mail.ru</column>
+            <column name="username">Igor</column>
+            <column name="salt">5b9de455924f1</column>
+        </table>
+        <table name="users">
+            <column name="id">19</column>
+            <column name="login">Nov3</column>
+            <column name="password">5dc667df4a9186a681eb48e40ec2f599</column>
+            <column name="email">true333@mail.ru</column>
             <column name="username">Igor</column>
             <column name="salt">5b9de455924f1</column>
         </table>
