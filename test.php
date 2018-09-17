@@ -12,7 +12,7 @@ echo '1';
            //    echo "database error: " . $e->getmessage();
            //     die();
           // }
-          $dp->->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+          $dp->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             //$db->prepare('set names utf8');
             //$db->prepare("LOAD XML LOCAL INFILE 'users.xml' REPLACE INTO TABLE users ROWS IDENTIFIED BY '<database>'");
             $db->prepare('SELECT * from users');
