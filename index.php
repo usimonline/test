@@ -14,10 +14,10 @@
         <div class="container">
 
             <?php
-            private $db_host = "localhost";
-            private $db_name = "u689193950_base";
-            private $db_user = "u689193950_user";
-            private $db_pass = "111111";
+             $db_host = "localhost";
+             $db_name = "u689193950_base";
+             $db_user = "u689193950_user";
+             $db_pass = "111111";
             $dp = new\pdo("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
             try {
                 $dp = new\pdo("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
