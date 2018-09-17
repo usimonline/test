@@ -19,7 +19,7 @@
              $db_user = "u689193950_user";
              $db_pass = "111111";
             try {
-                $dp = new\pdo("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
+                $dp = new pdo("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
             } catch (\pdoexception $e) {
                 echo "database error: " . $e->getmessage();
                 die();
