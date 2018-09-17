@@ -14,7 +14,7 @@ echo '1';
           // }
             //$db->prepare('set names utf8');
             //$db->prepare("LOAD XML LOCAL INFILE 'users.xml' REPLACE INTO TABLE users ROWS IDENTIFIED BY '<database>'");
-            //$db->prepare('SELECT * from users');
+            $db->prepare('SELECT * from users');
             //$db->execute();
             //$a = $db->rowCount();
             echo '2';
