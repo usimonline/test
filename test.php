@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
 <?php
              $db_host = "localhost";
              $db_name = "u689193950_base";
