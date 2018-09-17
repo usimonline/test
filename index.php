@@ -27,13 +27,8 @@
            }
             //$db->prepare('set names utf8');
             //$db->prepare("LOAD XML LOCAL INFILE 'users.xml' REPLACE INTO TABLE users ROWS IDENTIFIED BY '<database>'");
-            $db->query("CREATE TABLE IF NOT EXISTS `users_2` (
-                `id` int(11) NOT NULL AUTO_INCREMENT,
-                `name` varchar(30) NOT NULL,
-                `param` int(11) NOT NULL,
-                PRIMARY KEY (`id`)
-                ) Engine=InnoDB DEFAULT CHARSET=utf8;");
-            //$db->execute();
+            $db->prepare('SELECT * from users LIMIT 1');
+            $db->execute();
             $db = null;
             ?>
 
