@@ -12,7 +12,7 @@ $salt = 123;
 
 $stmt = $user->trtrtr();
 
-//foreach($stmt as $rows) {
- //   print_r($rows);
-//}
+foreach($stmt as $rows) {
+    print_r($rows);
+}
 //print_2($a);
