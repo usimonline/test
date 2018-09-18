@@ -215,7 +215,7 @@ class User
 
 
 
-        $stmt = $this->db->query('SELECT username FROM users');
+        $stmt = $this->db->query('SELECT * FROM users');
 
 
 
