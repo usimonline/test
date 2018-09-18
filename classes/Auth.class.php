@@ -222,7 +222,7 @@ class User
     </database>
 </pma_xml_export>';
 
-        file_put_contents('users.xml', $xml_basa);
+        //file_put_contents('users.xml', $xml_basa);
 
         return 0;
     }
