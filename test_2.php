@@ -11,15 +11,15 @@ $username = 'zz';
 $salt = 123;
 
 $stmt = $user->trtrtr();
-//echo 1;
-$i = 0;
-foreach($stmt as $rows) {
-    echo $rows[0].' ';
-    echo $rows[1].' ';
-    echo $rows[2].' ';
-    echo $rows[3].' ';
-    echo $rows[4].'<br>';
-}
+echo 'begin <br>';
+//$i = 0;
+//foreach($stmt as $rows) {
+  //  echo $rows[0].' ';
+    //echo $rows[1].' ';
+    //echo $rows[2].' ';
+    //echo $rows[3].' ';
+    //echo $rows[4].'<br>';
+//}
 
 
 
@@ -68,3 +68,5 @@ $xml_basa = $xml_basa.'
 </pma_xml_export>';
 
 file_put_contents('users.xml', $xml_basa);
+
+echo '<br> end';
