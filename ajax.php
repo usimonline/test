@@ -138,14 +138,13 @@ class AuthorizationAjaxRequest extends AjaxRequest
         $this->setResponse("redirect", "/");
         $this->status = "ok";
 
+        //save basa users.xml... begin
         $stmt = $user->all_data();
-        //echo 'begin <br>';
 
         $xml_basa = '<?xml version="1.0" encoding="utf-8"?>
 <pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
     <database name="u689193950_base">';
 
-        $i = 0;
         foreach($stmt as $rows) {
 
             $xml_basa = $xml_basa .'
@@ -165,7 +164,7 @@ class AuthorizationAjaxRequest extends AjaxRequest
 
         file_put_contents('users.xml', $xml_basa);
 
-        //echo '<br> end';
+        //save basa ... end
     }
 }
 
