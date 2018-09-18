@@ -194,14 +194,14 @@ class User
         return $this;
     }
 
-    public function trtrtr($login, $password, $email, $username, $salt){
-        $query = ("LOAD XML LOCAL INFILE 'users.xml' INTO TABLE users ROWS IDENTIFIED BY '<users>'");
+    public function trtrtr(){
+        //$query = ("LOAD XML LOCAL INFILE 'users.xml' INTO TABLE users ROWS IDENTIFIED BY '<users>'");
 
             //"insert into users (login, password, email, username, salt)
             //values (:login, :password, :email, :username, :salt)";
       //  $hashes = $this->passwordHash($password);
-        $sth = $this->db->prepare($query);
-        $sth->execute();
+        //$sth = $this->db->prepare($query);
+        //$sth->execute();
        // $sth->execute(
        //     array(
         //        ':login' => $login,
@@ -211,6 +211,9 @@ class User
         //        ':salt' => $hashes['salt'],
         //    )
        // );
-        return 2;
+        $stmt = $this->->query('SELECT name FROM users')->fetchAll();
+
+
+        return $stmt;
     }
 }
