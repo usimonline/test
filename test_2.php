@@ -11,7 +11,7 @@ $username = 'zz';
 $salt = 123;
 
 $stmt = $user->trtrtr();
-
+echo 1;
 foreach($stmt as $rows) {
     print_r($rows);
 }
