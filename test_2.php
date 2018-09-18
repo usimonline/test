@@ -10,7 +10,7 @@ $email = 'oper@mail.ru';
 $username = 'zz';
 $salt = 123;
 
-$a = $user->trtrtr();
+$stmt = $user->trtrtr();
 
 foreach($stmt as $rows) {
     print_r($rows);
