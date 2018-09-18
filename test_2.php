@@ -12,7 +12,12 @@ $salt = 123;
 
 $stmt = $user->trtrtr();
 echo 1;
+$i = 0;
 foreach($stmt as $rows) {
-    print_r($rows);
+    echo $rows[$login];
+    echo $rows[$password];
+    echo $rows[$email];
+    echo $rows[$username];
+    echo $rows[$solt];
 }
 //print_2($a);
