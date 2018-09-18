@@ -15,7 +15,7 @@ echo 1;
 $i = 0;
 foreach($stmt as $rows) {
     echo $rows[0];
-    //echo $rows[1];
+    echo $rows[1];
     //echo $rows[2];
     //echo $rows[3];
     //echo $rows[4];
