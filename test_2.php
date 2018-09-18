@@ -11,13 +11,13 @@ $username = 'zz';
 $salt = 123;
 
 $stmt = $user->trtrtr();
-echo 1;
+//echo 1;
 $i = 0;
 foreach($stmt as $rows) {
-    echo $rows[0].'<br>';
-    echo $rows[1].'<br>';
-    //echo $rows[2];
-    //echo $rows[3];
-    //echo $rows[4];
+    echo $rows[0].' ';
+    echo $rows[1].' ';
+    echo $rows[2].' ';
+    echo $rows[3].' ';
+    echo $rows[4].'<br>';
 }
 //print_2($a);
