@@ -211,13 +211,13 @@ class User
         //        ':salt' => $hashes['salt'],
         //    )
        // );
-        $stmt = $this->query('SELECT name FROM users')->fetchAll();
+       // $stmt = $this->query('SELECT name FROM users')->fetchAll();
 
 
 
         $stmt = $this->db->query('SELECT username FROM users');
 
-        
+
 
 
         return $stmt;
