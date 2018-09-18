@@ -4,10 +4,7 @@
 
 $user = new Auth\User (igor, 111);
 
-echo 'begin <br>';
-$stmt = $user->save_xml();
-echo '<br> end';
-
+$stmt = $user->all_data();
 echo 'begin <br>';
 
 $xml_basa = '<?xml version="1.0" encoding="utf-8"?>
@@ -34,3 +31,4 @@ $xml_basa = $xml_basa.'
 
 file_put_contents('users.xml', $xml_basa);
 
+echo '<br> end';
