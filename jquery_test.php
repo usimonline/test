@@ -13,10 +13,10 @@
 
     <form class='super-form' name="f1" method="get" action="enter_data.php">
         <label>
-            <input type="radio" id="check1">Lorem<Br>
+            <input type="radio" name="check">Lorem
          </label>
         <label>
-            <input type="radio" id="check2">Dolor<Br>
+            <input type="radio" name="check">Dolor
         </label>
     </form>
 
