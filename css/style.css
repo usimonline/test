@@ -38,6 +38,6 @@ display: inline-block;
     border: 2px double #eee;
     padding: 15px 10px;
 }
-form input{
+form label input{
     display: none;
 }
