@@ -36,5 +36,6 @@ body {
 form label{
 display: inline-block;
     border: 2px double black;
+    padding: 15px 10px;
 
 }
