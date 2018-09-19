@@ -14,11 +14,9 @@
     <form class='super-form' name="f1" method="get" action="enter_data.php">
         <label>
             <input type="radio" id="check1">Lorem<Br>
-            <input type="radio" id="check2">Ipsum<Br>
          </label>
         <label>
-            <input type="radio" id="check3">Dolor<Br>
-            <input type="radio" id="check4">Sit amet<br>
+            <input type="radio" id="check2">Dolor<Br>
         </label>
     </form>
 
